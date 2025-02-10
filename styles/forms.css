@@ -1,0 +1,33 @@
+@import url(fields/index.css);
+
+form {
+    margin-top: 2.5rem;
+}
+
+fieldset {
+    border: none;
+    display:grid;
+    
+    
+    
+    & .legend-field {
+        display: flex;
+        gap: .75rem;
+        padding-bottom: .5rem;
+        
+        & legend {
+            font: var(--heading-sm);
+            color: var(--text-heading);
+        }
+    }
+
+    
+}
+
+
+fieldset + fieldset {
+    margin-top: 3rem;
+}
+
+
+

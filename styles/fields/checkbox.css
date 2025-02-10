@@ -1,0 +1,139 @@
+.style-picker-wrapper{
+    
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    max-height: 48px;
+    width: 176px;
+
+    position: relative;
+    & input,
+    & input:focus,
+    & input:hover {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    } 
+    
+    & .label{
+        font:var(--body-tl);
+        color:var(--text-heading);
+    }
+    
+    & .image-style{
+        
+        background-image: url('../../assets/icons/toggle-dark.svg');
+        width:64px;
+        height: 32px;   
+    }
+
+    &:has(:checked) .image-style {
+        
+       &.image-style{
+             
+            background-image: url('../../assets/icons/toggle-light.svg'); 
+            
+        }
+    }
+
+    & input:checked + .image-style::after {
+        transform: translateX(25px);
+    }
+
+    & .light-label {
+        display: none;
+    }
+
+    & input:checked ~ .dark-label {
+        display: none;
+      }
+
+
+    & input:checked ~ .light-label {
+        display: inline;
+    }
+}
+
+.checkbox-wrapper{
+     
+    border-top: 1px solid var(--input-stroke) ;
+    margin-top: 48px;
+    padding-top:40px ;
+     
+    position: relative;
+    & [type="checkbox"] {
+        all: unset;
+        position: absolute;
+        inset: 0 
+    }
+
+    
+   
+    & .input-wrapper-checkbox {
+        
+       display: flex;
+       align-items: center;
+
+       gap:12px ;
+       
+       
+       position: relative;
+       & input,/* para zerar todas a configurações de input já feita*/
+       & input:focus,
+       & input:hover {
+           all:unset;
+           position: absolute;
+           inset: 0;
+       }
+
+       .checkbox-image {
+        height: 20px;
+        width: 20px;
+        background-image: url(../../assets/icons/unchecked.svg);
+
+        }
+
+        &:has(:checked)  {
+            
+            & .checkbox-image{
+            background-image: url(../../assets/icons/checked.svg); 
+            }   
+        }
+
+    }
+
+    
+    
+} 
+
+
+
+.terms-wrapper {
+
+
+    font: var(--body-tl);
+
+    & strong {
+     font-weight: 600;
+     color: var(--brand-light) ; 
+    }
+ 
+}
+
+
+
+ 
+
+    
+   
+
+
+
+    
+   
+
+    
+
+   
+
